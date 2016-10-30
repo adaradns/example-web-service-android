@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isOnline()){
-                    pedirDatos();
+                    pedirDatos("http://bdenlanube.esy.es/testconnect/usuarios.xml");
                 }else{
                     Toast.makeText(getApplicationContext(), "Sin conexion", Toast.LENGTH_SHORT).show();
                 }
@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void pedirDatos(){
+    public void pedirDatos(String uri){
         //Instanciamos la tarea
         MyTask task = new MyTask();
         //la ejecutamos
-        task.execute((Runnable) AsyncTask.THREAD_POOL_EXECUTOR);
+        task.execute(uri);
     }
 
     private class MyTask extends AsyncTask<String, String, String>{
@@ -100,15 +100,16 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            for(int i=0; i <= 10; i++){
+            /*for(int i=0; i <= 10; i++){
                 publishProgress("Numero: " + i);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
-            return "Finish";
+            }*/
+            String data = HTTPManager.getData(params[0]);
+            return data;
         }
 
         @Override
