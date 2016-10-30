@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios>
+	<usuario>
+		<usuarioId>1</usuarioId>
+		<nombre>Adara</nombre>
+		<email>adaradenis@gmail.com</email>
+	</usuario>
+	<usuario>
+		<usuarioId>2</usuarioId>
+		<nombre>Pepe</nombre>
+		<email>pepea@gmail.com</email>
+	</usuario>
+	<usuario>
+		<usuarioId>3</usuarioId>
+		<nombre>Claudia</nombre>
+		<email>claudiaSilvana@gmail.com</email>
+	</usuario>
+	<usuario>
+		<usuarioId>4</usuarioId>
+		<nombre>Moni</nombre>
+		<email>moniargento@gmail.com</email>
+	</usuario>
+	<usuario>
+		<usuarioId>5</usuarioId>
+		<nombre>Tata</nombre>
+		<email>talalala@gmail.com</email>
+	</usuario>
+</usuarios>
