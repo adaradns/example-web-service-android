@@ -14,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.service.web.example.adara.examplwebservice.POJO.Usuario;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button boton, salir;
     TextView texto;
     List<MyTask> taskList;
-
+    List <Usuario> usuarioList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
